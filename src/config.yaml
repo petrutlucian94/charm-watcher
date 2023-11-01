@@ -137,3 +137,15 @@ options:
       User provided planner configuration. Supports a string representation of
       a python dictionary where each top-level key represents a value in the
       relevant planner section in watcher.conf template.
+  maas_url:
+    default:
+    type: string
+    description: |
+      MAAS (metal-as-a-service) API URL. Example: http://1.2.3.4:5240/MAAS.
+      If not provided, Watcher assumes the baremetal provisioner to be Ironic.
+  maas_key:
+    default:
+    type: string
+    description: |
+      MAAS authentication key, usually having the following form:
+      "consumer_key:consumer_token:secret".
